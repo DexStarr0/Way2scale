@@ -24,8 +24,8 @@ export default function SigninSignup() {
     cpassword: "",
   });
   const [loginData, checkUser] = useState({
-    email: "a@gmail.com",
-    password: "a",
+    email: "",
+    password: "",
   });
 
   const handleInput = (e) => {

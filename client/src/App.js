@@ -20,7 +20,6 @@ function App() {
   const [userData, setuserData] = useState({ active: false });
   useEffect(() => {
     fetchdata();
-    console.log("useeffect");
   }, []);
 
   const fetchdata = async () => {
@@ -38,7 +37,6 @@ function App() {
       setuserData({ ...data });
     } catch (error) {
       setuserData({ active: false });
-
       console.log(error);
     }
   };

@@ -109,6 +109,8 @@ router.post("/contact", authenticate, async (req, res) => {
 router.get("/getdata", async (req, res) => {
   // const { name, email, phone, active } = req.rootUser;
   // const user = await User.findOne({ email: "a@gmail.com" });
-  res.status(200).json({ active: true });
+  res
+    .status(200)
+    .json({ message: "user register succefully", name: "ayush", active: true });
 });
 module.exports = router;

@@ -107,12 +107,7 @@ router.post("/contact", authenticate, async (req, res) => {
 });
 //get getdata
 router.get("/getdata", authenticate, async (req, res) => {
-  const token = req.cookies.w2s;
-  const ttoken = jwt.verify(token, process.env.SECRET_KEY);
-  const data = await User.findOne({
-    _id: ttoken._id,
-  });
-
-  res.json(data);
+  const { name, email, phone, active } = req.rootUser;
+  res.status(200).send({ name, email, phone, active });
 });
 module.exports = router;

@@ -35,7 +35,9 @@ router.post("/register", async (req, res) => {
 
       const userRegister = await user.save();
       // console.log(userRegister);
-      res.status(201).json({ message: "user register succefully" });
+      res
+        .status(201)
+        .json({ message: "user register succefully", name: userRegister.name });
     }
   } catch (error) {
     console.log(error);

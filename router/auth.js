@@ -106,7 +106,7 @@ router.post("/contact", authenticate, async (req, res) => {
   }
 });
 //get getdata
-router.get("/getdata", authenticate, (req, res) => {
+router.get("/getdata", authenticate, async (req, res) => {
   // console.log(req.rootUser);
   res.send(req.rootUser);
 });

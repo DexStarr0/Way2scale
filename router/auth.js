@@ -107,7 +107,12 @@ router.post("/contact", authenticate, async (req, res) => {
 });
 //get getdata
 router.get("/getdata", authenticate, async (req, res) => {
-  // console.log(req.rootUser);
-  res.send(req.rootUser);
+  const token = req.cookies.w2s;
+  const ttoken = jwt.verify(token, process.env.SECRET_KEY);
+  const data = await User.findOne({
+    _id: ttoken._id,
+  });
+
+  res.json(data);
 });
 module.exports = router;

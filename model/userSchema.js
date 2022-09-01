@@ -45,14 +45,6 @@ const userSchema = mongoose.Schema({
       },
     },
   ],
-  tokens: [
-    {
-      token: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
 });
 // we are hashing the passward
 userSchema.pre("save", async function (next) {
@@ -70,18 +62,7 @@ userSchema.methods.addMessage = async function (message) {
     console.log(error);
   }
 };
-//we are generating the token
-userSchema.methods.generateAuthToken = async function () {
-  try {
-    let token = await jwt.sign({ _id: this._id }, process.env.SECRET_KEY);
 
-    this.tokens = this.tokens.concat({ token });
-    await this.save();
-    return token;
-  } catch (error) {
-    console.log(error);
-  }
-};
 //create class of user collection
 const User = mongoose.model("USER", userSchema);
 module.exports = User;

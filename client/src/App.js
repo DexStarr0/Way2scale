@@ -34,6 +34,7 @@ function App() {
       if (response.status !== 200) {
         throw new Error(data.error);
       }
+      console.log(data);
       setuserData({ ...data });
     } catch (error) {
       setuserData({ active: false });

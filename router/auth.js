@@ -57,10 +57,14 @@ router.post("/signin", async (req, res) => {
 
       //what to do if password is matched or mot
       if (isMatch) {
-        // method - efficient
-        const token = await userLogin.generateAuthToken();
+        //creating token using user id
+        let token = await jwt.sign(
+          { _id: userLogin._id },
+          process.env.SECRET_KEY,
+          { expiresIn: 60 * 60 * 30 }
+        );
         //saving token to cokies
-        res.cookie("jwtoken", token, {
+        res.cookie("w2s", token, {
           expires: new Date(Date.now() + 25892000000),
           httpOnly: true,
         });
@@ -78,7 +82,7 @@ router.post("/signin", async (req, res) => {
 
 //post signout
 router.get("/signout", authenticate, (req, res) => {
-  res.clearCookie("jwtoken", { path: "/" });
+  res.clearCookie("w2s", { path: "/" });
   const fullName = req.rootUser.name.trim().split(/\s+/);
   const fname = fullName[0];
   res.status(200).json({
@@ -103,6 +107,7 @@ router.post("/contact", authenticate, async (req, res) => {
 });
 //get getdata
 router.get("/getdata", authenticate, (req, res) => {
+  // console.log(req.rootUser);
   res.send(req.rootUser);
 });
 module.exports = router;

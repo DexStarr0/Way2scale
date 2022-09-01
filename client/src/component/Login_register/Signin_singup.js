@@ -17,15 +17,15 @@ export default function SigninSignup() {
   //for navigate to other route
 
   const [user, setUser] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    password: "",
-    cpassword: "",
+    name: "ayush",
+    email: "@gmail.com",
+    phone: "2345",
+    password: "a",
+    cpassword: "a",
   });
   const [loginData, checkUser] = useState({
-    email: "",
-    password: "",
+    email: "a@gmail.com",
+    password: "a",
   });
 
   const handleInput = (e) => {

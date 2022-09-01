@@ -35,9 +35,7 @@ router.post("/register", async (req, res) => {
 
       const userRegister = await user.save();
       // console.log(userRegister);
-      res
-        .status(201)
-        .json({ message: "user register succefully", name: userRegister.name });
+      res.status(201).json({ message: "user register succefully" });
     }
   } catch (error) {
     console.log(error);
@@ -108,8 +106,9 @@ router.post("/contact", authenticate, async (req, res) => {
   }
 });
 //get getdata
-router.get("/getdata", authenticate, async (req, res) => {
-  const { name, email, phone, active } = req.rootUser;
-  res.status(200).send({ name, email, phone, active });
+router.get("/getdata", async (req, res) => {
+  // const { name, email, phone, active } = req.rootUser;
+  // const user = await User.findOne({ email: "a@gmail.com" });
+  res.status(200).json({ active: true });
 });
 module.exports = router;

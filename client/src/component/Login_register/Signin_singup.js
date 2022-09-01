@@ -57,7 +57,7 @@ export default function SigninSignup() {
       console.log("Invalid registration");
     } else {
       window.alert(data.message);
-      console.log(data);
+
       document.querySelector("#signin_signup").classList.toggle("sign-up-mode");
       console.log("successful registration");
 

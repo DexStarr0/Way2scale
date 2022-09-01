@@ -30,12 +30,10 @@ function App() {
       });
 
       const data = await response.json();
-      if (response.status === 400 || !data) {
+
+      if (response.status !== 200) {
         throw new Error(data.error);
       }
-      // if (response.status !== 200) {
-      //   throw new Error(data.error);
-      // }
       console.log(data);
       setuserData({ ...data });
     } catch (error) {

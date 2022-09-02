@@ -111,6 +111,8 @@ router.get("/getdata", authenticate, async (req, res) => {
 });
 //post fetdata
 router.post("/fetdata", authenticate, async (req, res) => {
-  res.status(200).json(req.rootUser);
+  // res.status(200).json(req.rootUser);
+  const { name, email, phone, work, active } = req.rootUser;
+  res.status(200).json({ name, email, phone, work, acitve });
 });
 module.exports = router;

@@ -37,10 +37,10 @@ function App() {
       }
       setuserData({ ...data });
 
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       setuserData({ active: false });
-      console.log(error);
+      // console.log(error);
     }
   };
 

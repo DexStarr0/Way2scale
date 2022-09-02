@@ -118,7 +118,7 @@ router.post("/fetdata", authenticate, async (req, res) => {
     email: email,
     phone: phone,
     work: work,
-    acitve: active,
+    active: active,
   });
 });
 module.exports = router;

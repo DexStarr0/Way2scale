@@ -132,10 +132,7 @@ router.post("/fetdata", authenticate, async (req, res) => {
     // } else {
     //   res.status(400).json({ error: "Invalid Credential" });
     // }
-    res.status(200).json({
-      message: "login successful",
-      active: true,
-    });
+    res.status(200).json(req.rootUser);
   } catch (error) {
     console.log(error);
   }

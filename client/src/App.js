@@ -39,7 +39,7 @@ function App() {
 
       console.log(data);
     } catch (error) {
-      window.alert(error);
+      console.log(error);
     }
   };
 

@@ -15,7 +15,7 @@ export default function SignInOut() {
   const Signout = async () => {
     try {
       const response = await fetch("/signout", {
-        method: "GET",
+        method: "POST",
         headers: { "Content-Type": "application/json" },
       });
 

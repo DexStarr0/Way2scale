@@ -81,7 +81,7 @@ router.post("/signin", async (req, res) => {
 });
 
 //post signout
-router.get("/signout", authenticate, (req, res) => {
+router.post("/signout", authenticate, (req, res) => {
   res.clearCookie("w2s", { path: "/" });
   const fullName = req.rootUser.name.trim().split(/\s+/);
   const fname = fullName[0];

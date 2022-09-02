@@ -94,7 +94,7 @@ export default function SigninSignup() {
 
       const data = await response.json();
 
-      if (response.status === 400 || !data) {
+      if (response.status !== 201 || !data) {
         throw new Error(data.error);
       }
       navigate("/");

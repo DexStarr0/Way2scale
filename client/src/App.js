@@ -23,15 +23,15 @@ function App() {
   }, []);
   const fetchdata = async () => {
     try {
-      const email = "a@gmail.com";
-      const password = "a";
+      // const email = "a@gmail.com";
+      // const password = "a";
 
       const response = await fetch("/fetdata", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        // body: JSON.stringify({ email, password }),
       });
 
       const data = await response.json();

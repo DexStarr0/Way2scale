@@ -35,9 +35,7 @@ router.post("/register", async (req, res) => {
 
       const userRegister = await user.save();
       // console.log(userRegister);
-      res
-        .status(201)
-        .json({ message: "user register succefully", name: userExist.name });
+      res.status(201).json({ message: "user register succefully" });
     }
   } catch (error) {
     console.log(error);
@@ -70,9 +68,7 @@ router.post("/signin", async (req, res) => {
           expires: new Date(Date.now() + 25892000000),
           httpOnly: true,
         });
-        res
-          .status(201)
-          .json({ message: "login successful", name: userLogin.name });
+        res.status(201).json({ message: "login successful" });
       } else {
         res.status(400).json({ error: "Invalid Credential" });
       }

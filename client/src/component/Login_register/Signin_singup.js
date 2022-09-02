@@ -100,7 +100,7 @@ export default function SigninSignup() {
       navigate("/");
       window.alert(data.message);
       console.log(data.message);
-      console.log(data);
+
       fetchdata();
 
       //setting all value to empty

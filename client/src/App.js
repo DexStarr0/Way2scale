@@ -39,6 +39,7 @@ function App() {
 
       console.log(data);
     } catch (error) {
+      setuserData({ active: false });
       console.log(error);
     }
   };

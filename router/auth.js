@@ -115,26 +115,6 @@ router.get("/getdata", authenticate, async (req, res) => {
 });
 //post fetdata
 router.post("/fetdata", authenticate, async (req, res) => {
-  try {
-    // const { email, password } = req.body;
-    // if (!email || !password) {
-    //   return res.status(422).json({ error: "please fill all field properly" });
-    // }
-
-    // const userLogin = await User.findOne({ email: email });
-
-    // if (userLogin) {
-    //   res.status(200).json({
-    //     message: "login successful",
-    //     name: userLogin.name,
-    //     active: true,
-    //   });
-    // } else {
-    //   res.status(400).json({ error: "Invalid Credential" });
-    // }
-    res.status(200).json(req.rootUser);
-  } catch (error) {
-    console.log(error);
-  }
+  res.status(200).json(req.rootUser);
 });
 module.exports = router;

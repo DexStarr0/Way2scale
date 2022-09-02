@@ -40,8 +40,7 @@ function App() {
         throw new Error(data.error);
       }
       setuserData({ ...data });
-      // window.alert(data.message);
-      console.log(data.message);
+
       console.log(data);
     } catch (error) {
       window.alert(error);

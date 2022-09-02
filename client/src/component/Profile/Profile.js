@@ -32,7 +32,7 @@ export default function Profile() {
             <div className="avtar d-flex justify-content-center align-items-center p-4">
               <img
                 className="img-fluid rounded-circle "
-                src="https://images.squarespace-cdn.com/content/v1/5ec57f8c0b2153285b4f61c5/1592259666586-MN6AOKP9ZHK7DV5ORTVM/AdobeStock_230407433.jpg?format=750w"
+                src="https://res.cloudinary.com/dxj71mfza/image/upload/v1662131524/1176393_og9cpy.png"
                 alt="avtar"
               />
             </div>

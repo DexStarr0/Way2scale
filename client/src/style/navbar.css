@@ -83,6 +83,7 @@ body {
   position: absolute;
   background-color: #ffffff;
   right: calc((var(--avtar_dia) / 2));
+  /* right: 22px; */
   top: 50px;
   border: var(--color-light) solid 2px;
   transition: 0.6s;

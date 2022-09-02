@@ -36,38 +36,40 @@ export default function SignInOut() {
   if (userData.active) {
     return (
       <>
-        <div className={"profile_dummy_icon rounded-circle "}>
-          <div className="profile_avtar" onClick={toggler}>
-            <span>
-              <IoPersonCircleSharp />
-            </span>
-          </div>
-
-          <section
-            className="profileOptins p-2
-            rounded-bottom rounded-start"
-          >
-            <Link className="nav_link" to="/profile">
-              <span className="nav_title_icon">
+        <section className="profile_box_main">
+          <div className={"profile_dummy_icon rounded-circle "}>
+            <div className="profile_avtar" onClick={toggler}>
+              <span>
                 <IoPersonCircleSharp />
               </span>
-              <span className="nav_title">profile</span>
-            </Link>
-            <Link className="nav_link" to="/support">
-              <span className="nav_title_icon">
-                <MdOutlineHelp />
-              </span>
-              <span className="nav_title">Help & Support</span>
-            </Link>
+            </div>
 
-            <button className="nav_link" onClick={Signout}>
-              <span className="nav_title_icon">
-                <FaSignOutAlt />
-              </span>
-              <span className="nav_title">sign out</span>
-            </button>
-          </section>
-        </div>
+            <section
+              className="profileOptins p-2
+            rounded-bottom rounded-start"
+            >
+              <Link className="nav_link" to="/profile">
+                <span className="nav_title_icon">
+                  <IoPersonCircleSharp />
+                </span>
+                <span className="nav_title">profile</span>
+              </Link>
+              <Link className="nav_link" to="/support">
+                <span className="nav_title_icon">
+                  <MdOutlineHelp />
+                </span>
+                <span className="nav_title">Help & Support</span>
+              </Link>
+
+              <button className="nav_link" onClick={Signout}>
+                <span className="nav_title_icon">
+                  <FaSignOutAlt />
+                </span>
+                <span className="nav_title">sign out</span>
+              </button>
+            </section>
+          </div>
+        </section>
       </>
     );
     //

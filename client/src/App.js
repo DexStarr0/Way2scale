@@ -21,26 +21,52 @@ function App() {
   useEffect(() => {
     fetchdata();
   }, []);
-
   const fetchdata = async () => {
     try {
-      const response = await fetch("/getdata", {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
+      const email = "a@gmail.com";
+      const password = "a";
+
+      const response = await fetch("/fetdata", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
       });
 
       const data = await response.json();
 
-      if (response.status !== 200) {
+      if (response.status === 400 || !data) {
         throw new Error(data.error);
       }
-      console.log(data);
       setuserData({ ...data });
+      // window.alert(data.message);
+      console.log(data.message);
+      console.log(data);
     } catch (error) {
-      setuserData({ active: false });
-      console.log(error);
+      window.alert(error);
     }
   };
+
+  // const fetchdata = async () => {
+  //   try {
+  //     const response = await fetch("/getdata", {
+  //       method: "GET",
+  //       headers: { "Content-Type": "application/json" },
+  //     });
+
+  //     const data = await response.json();
+
+  //     if (response.status !== 200) {
+  //       throw new Error(data.error);
+  //     }
+  //     console.log(data);
+  //     setuserData({ ...data });
+  //   } catch (error) {
+  //     setuserData({ active: false });
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <>

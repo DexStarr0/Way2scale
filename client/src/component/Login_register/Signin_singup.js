@@ -54,9 +54,11 @@ export default function SigninSignup() {
 
     if (response.status === 422 || !data) {
       window.alert(data.error);
+
       console.log("Invalid registration");
     } else {
       window.alert(data.message);
+      console.log(data);
       document.querySelector("#signin_signup").classList.toggle("sign-up-mode");
       console.log("successful registration");
 
@@ -98,6 +100,7 @@ export default function SigninSignup() {
       navigate("/");
       window.alert(data.message);
       console.log(data.message);
+      console.log(data);
       fetchdata();
 
       //setting all value to empty

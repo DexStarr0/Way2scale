@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import errImg from "../img/404Error.gif";
+import errImg from "../img/404Error.jpg";
 export default function ErrorPage() {
   const navigate = useNavigate();
 

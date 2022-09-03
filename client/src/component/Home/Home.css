@@ -116,11 +116,11 @@
 
 /* formate-2 */
 .formate-2 {
-  height: 200px;
+  height: 220px;
 }
 .contest-timeline {
   overflow: hidden;
-  height: 200px;
+  height: 220px;
 }
 .subheading {
   line-height: 70px;
@@ -134,39 +134,50 @@
 
 #progress-num {
   list-style: none;
-  display: flex;
   text-align: center;
-  justify-content: space-between;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 #progress-num .step {
   position: relative;
 }
-
-.fa-circle {
+#progress-num .step .progress-box {
   position: absolute;
-  bottom: -47px;
-  z-index: 10;
-  display: inline-block;
-  font-size: 15px;
-  /* transform: translate(-50%, 47px); */
-  color: white;
+  bottom: -40px;
+  width: 100%;
 }
 
-#progress-num .step::after {
-  content: "";
+.progress-box i {
   position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  color: #969696;
+}
+#progress-num li:nth-of-type(1) i {
+  transform: translate(0, -50%);
+}
+#progress-num li:nth-of-type(4) i {
+  transform: translate(-100%, -50%);
+}
+#progress-num .step .progress-line {
+  position: absolute;
+  transform: translateY(50%);
   left: 0;
-  bottom: -40px;
+  bottom: 0;
   height: 4px;
-  width: 450px;
+  width: 100%;
   background: #969696;
 }
 #progress-num .active {
   text-align: start;
 }
-#progress-num .active::after {
+
+#progress-num .active .progress-line {
   left: 0;
+
   background: #6e07c7;
 }
 #progress-num .active i {
@@ -175,11 +186,9 @@
   color: #6e07c7;
 }
 #progress-num .non-active {
-  left: 0;
+  text-align: end;
 }
-#progress-num .non-active i {
-  left: 95px;
-}
+
 #progress-num .step .head {
   position: relative;
   font-weight: 700;

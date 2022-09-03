@@ -9,7 +9,7 @@ export default function SignInOut() {
   const toggler = () => {
     document.querySelector(".profile_dummy_icon").classList.toggle("showOpt");
   };
-  const { userData, fetchdata } = useContext(UserContext);
+  const { userData, fetchdata, showAlert } = useContext(UserContext);
   const navigate = useNavigate();
 
   const Signout = async () => {
@@ -21,15 +21,17 @@ export default function SignInOut() {
 
       const data = await response.json();
       if (response.status !== 200) {
-        alert(data.error);
+        // alert(data.error);
+        showAlert("warning", data.error);
         throw new Error(data.error);
       }
       //updating userdata by calling fetchdata function
       fetchdata();
-      alert(data.message);
+      // alert(data.message);
+      showAlert("success", data.message);
       navigate("/");
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 

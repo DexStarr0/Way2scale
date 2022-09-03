@@ -10,6 +10,7 @@ import Footer from "./component/Footer";
 import SigninSignup from "./component/Login_register/Signin_singup";
 import Navbar from "./component/Navbar";
 import SearchJob from "./component/SearchJob";
+import Alert from "./component/Alert/Alert";
 
 export const UserContext = createContext();
 
@@ -18,6 +19,7 @@ export const UserContext = createContext();
 function App() {
   const location = useLocation();
   const [userData, setuserData] = useState({ active: false });
+  const [alert, setAlert] = useState(null);
   useEffect(() => {
     fetchdata();
   }, []);
@@ -36,39 +38,21 @@ function App() {
         throw new Error(data.error);
       }
       setuserData({ ...data });
-
-      // console.log(data);
     } catch (error) {
       setuserData({ active: false });
-      // console.log(error);
     }
   };
-
-  // const fetchdata = async () => {
-  //   try {
-  //     const response = await fetch("/getdata", {
-  //       method: "GET",
-  //       headers: { "Content-Type": "application/json" },
-  //     });
-
-  //     const data = await response.json();
-
-  //     if (response.status !== 200) {
-  //       throw new Error(data.error);
-  //     }
-  //     console.log(data);
-  //     setuserData({ ...data });
-  //   } catch (error) {
-  //     setuserData({ active: false });
-  //     console.log(error);
-  //   }
-  // };
-
+  const showAlert = (type, msg) => {
+    setAlert({ type: type, msg: msg });
+    setInterval(() => {
+      setAlert(null);
+    }, 2000);
+  };
   return (
     <>
-      <UserContext.Provider value={{ userData, fetchdata }}>
+      <UserContext.Provider value={{ userData, fetchdata, showAlert }}>
         <Navbar />
-
+        <Alert alert={alert} />
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="profile" element={<Profile />} />

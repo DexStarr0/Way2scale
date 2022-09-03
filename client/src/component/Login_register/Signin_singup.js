@@ -7,7 +7,7 @@ import { UserContext } from "../../App";
 import { motion } from "framer-motion";
 
 export default function SigninSignup() {
-  const { userData, fetchdata } = useContext(UserContext);
+  const { userData, fetchdata, showAlert } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -53,11 +53,13 @@ export default function SigninSignup() {
     let data = await response.json();
 
     if (response.status === 422 || !data) {
-      window.alert(data.error);
+      // window.alert(data.error);
+      showAlert("warning", data.error);
 
-      console.log("Invalid registration");
+      // console.log("Invalid registration");
     } else {
-      window.alert(data.message);
+      // window.alert(data.message);
+      showAlert("success", data.message);
 
       document.querySelector("#signin_signup").classList.toggle("sign-up-mode");
       console.log("successful registration");
@@ -95,18 +97,20 @@ export default function SigninSignup() {
       const data = await response.json();
 
       if (response.status !== 201 || !data) {
+        showAlert("warning", data.error);
         throw new Error(data.error);
       }
       navigate("/");
-      window.alert(data.message);
-      console.log(data.message);
+      // window.alert(data.message);
+      // console.log(data.message);
+      showAlert("success", data.message);
 
       fetchdata();
 
       //setting all value to empty
       checkUser({ email: "", password: "" });
     } catch (error) {
-      window.alert(error);
+      // window.alert(error);
     }
   };
 

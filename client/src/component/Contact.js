@@ -5,7 +5,7 @@ import { UserContext } from "../App";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-  const { userData } = useContext(UserContext);
+  const { userData, showAlert } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -49,14 +49,14 @@ export default function Contact() {
         throw new Error(data.error);
       }
       if (response.status !== 201) {
-        alert(data.error);
+        showAlert("warning", data.error);
         throw new Error(data.error);
       }
-      alert(data.message);
+
+      showAlert("success", data.message);
+      // alert(data.message);
       setUser({ ...user, message: "" });
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
   //handling change in input
   const handleInput = (e) => {

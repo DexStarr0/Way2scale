@@ -44,7 +44,7 @@ export default function Contact() {
       const data = await response.json();
 
       if (response.status === 401) {
-        alert(data.error);
+        showAlert("warning", data.error);
         navigate("/signin");
         throw new Error(data.error);
       }

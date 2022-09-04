@@ -31,7 +31,13 @@ router.post("/register", async (req, res) => {
         error: "Email already exist . plz try with different email.",
       });
     } else {
-      const user = new User({ name, email, phone, password, cpassword });
+      const user = new User({
+        name,
+        email: email[0].toLowerCase() + email.slice(1),
+        phone,
+        password,
+        cpassword,
+      });
 
       const userRegister = await user.save();
       // console.log(userRegister);
@@ -50,7 +56,9 @@ router.post("/signin", async (req, res) => {
       return res.status(422).json({ error: "please fill all field properly" });
     }
 
-    const userLogin = await User.findOne({ email: email });
+    const userLogin = await User.findOne({
+      email: email[0].toLowerCase() + email.slice(1),
+    });
 
     if (userLogin) {
       const isMatch = await bcrypt.compare(password, userLogin.password);
@@ -112,8 +120,9 @@ router.get("/getdata", authenticate, async (req, res) => {
 //post fetdata
 router.post("/fetdata", authenticate, async (req, res) => {
   // res.status(200).json(req.rootUser);
-  const { name, email, phone, work, active } = req.rootUser;
+  const { img, name, email, phone, work, active } = req.rootUser;
   res.status(200).json({
+    img: img,
     name: name,
     email: email,
     phone: phone,

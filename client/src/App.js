@@ -44,9 +44,9 @@ function App() {
   };
   const showAlert = (type, msg) => {
     setAlert({ type: type, msg: msg });
-    setInterval(() => {
-      setAlert(null);
-    }, 2000);
+    // setInterval(() => {
+    //   setAlert(null);
+    // }, 2000);
   };
   return (
     <>

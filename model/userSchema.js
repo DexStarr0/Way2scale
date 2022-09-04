@@ -3,6 +3,11 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 //defining schema for document
 const userSchema = mongoose.Schema({
+  img: {
+    type: String,
+    default:
+      "https://res.cloudinary.com/dxj71mfza/image/upload/v1662131524/1176393_og9cpy.png",
+  },
   name: {
     type: String,
     required: true,

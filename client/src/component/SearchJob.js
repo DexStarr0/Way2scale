@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Jobbox from "./Jobbox";
 import { motion } from "framer-motion";
+import { UserContext } from "../App";
 // import jobdata from "./jobsdata.json";
 
 export default function SearchJob() {
+  const { showAlert } = useContext(UserContext);
   const [jobs, setjobs] = useState(null);
   const [searchkey, setsearchkey] = useState({ job_type: "", location: "" });
   const handleInput = (e) => {
@@ -17,13 +19,17 @@ export default function SearchJob() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       job_type: searchkey.job_type,
-      location: searchkey.location,
+      location: searchkey.job_type,
     }),
   };
 
   const getjobs = async (e) => {
     e.preventDefault();
     try {
+      if (!searchkey.job_type || !searchkey.job_type) {
+        showAlert("warning", "Please fill the form properly ");
+        return;
+      }
       const response = await fetch("/findjobs", options);
       const data = await response.json();
       setjobs(data);

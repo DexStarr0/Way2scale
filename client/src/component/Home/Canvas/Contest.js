@@ -2,6 +2,21 @@ import React from "react";
 import cup from "../../../img/convas/Frame.png";
 
 export default function Contest() {
+  const d = new Date();
+  let monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   return (
     <>
       {/* start-1 */}
@@ -29,7 +44,11 @@ export default function Contest() {
             interpreting this theme! You can use any materials you want.
           </p>
 
-          <p id="date-1">7th Dec, 2021 - 26th Jan, 2022</p>
+          <p id="date-1">{`${d.getDate() - 7}th ${
+            monthNames[d.getMonth()]
+          }, ${d.getFullYear()} - ${d.getDate() + 7}th ${
+            monthNames[d.getMonth() + 1]
+          }, ${d.getFullYear()}`}</p>
           <button className=" m-2 py-1 px-2 bg-dark text-white">
             <span>Enter Now</span>
             <i className="fa-solid fa-arrow-right px-1"></i>

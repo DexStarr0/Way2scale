@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import errImg from "../img/404Error.jpg";
+
+import ErrorImg from "../img/404Error.svg";
 export default function ErrorPage() {
   const navigate = useNavigate();
 
@@ -19,7 +20,7 @@ export default function ErrorPage() {
         <div className="error_box text-center">
           <div className=" ">
             <img
-              src={errImg}
+              src={ErrorImg}
               style={{ width: "400px" }}
               alt=""
               className="img-fluid"

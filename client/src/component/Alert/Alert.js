@@ -18,7 +18,7 @@ export default function Alert(props) {
           }}
           role="alert"
         >
-          {alert.type} : {alert.msg}
+          {alert.msg}
         </div>
       )}
     </>

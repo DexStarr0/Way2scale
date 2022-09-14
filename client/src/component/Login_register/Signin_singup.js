@@ -1,4 +1,5 @@
-import Login from "../../img/log.svg";
+import Login from "../../img/login.svg";
+
 import Register from "../../img/register.svg";
 import "./signin_signup.css";
 import React, { useState, useEffect, useContext } from "react";
@@ -300,7 +301,7 @@ export default function SigninSignup() {
               Sign up
             </button>
           </div>
-          <img src={Register} className="image" alt="" />
+          <img src={Login} className="image" alt="" />
         </div>
         <div className="panel right-panel">
           <div className="content">
@@ -317,7 +318,7 @@ export default function SigninSignup() {
               Sign in
             </button>
           </div>
-          <img src={Login} className="image" alt="" />
+          <img src={Register} className="image" alt="" />
         </div>
       </div>
     </motion.div>

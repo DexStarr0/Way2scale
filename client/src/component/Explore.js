@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import slogo from "../img/slogo.png";
 
 const setdi = {
   height: "200px",
@@ -23,7 +24,7 @@ export default function Explore() {
           className="box container-fluid bg-warning "
           style={setdi}
           animate={{
-            scale: [1, 2, 2, 1, 1],
+            scale: [0.5, 1.5, 1.5, 0.5, 0.5],
             rotate: [0, 0, 180, 180, 0],
             borderRadius: ["0%", "0%", "50%", "50%", "0%"],
           }}
@@ -35,7 +36,14 @@ export default function Explore() {
             repeat: Infinity,
             repeatDelay: 1,
           }}
-        ></motion.div>
+        >
+          <img
+            src={slogo}
+            alt="logo"
+            className="img-responsive"
+            style={{ height: "100%", width: "100%" }}
+          />
+        </motion.div>
       </motion.div>
     </>
   );

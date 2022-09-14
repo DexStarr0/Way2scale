@@ -1,6 +1,21 @@
 import React from "react";
 
 export default function ContentTimeline() {
+  const d = new Date();
+  let monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   return (
     <>
       {/* start-2 */}
@@ -12,7 +27,9 @@ export default function ContentTimeline() {
               <li className="step active">
                 <span className="head">Launch</span>
                 <br />
-                <span className="sub-head">7 days ago</span>
+                <span className="sub-head">{`${d.getDate() - 7}th ${
+                  monthNames[d.getMonth()]
+                }, ${d.getFullYear()}`}</span>
                 <br />
                 <div className="progress-box">
                   <i className="fas fa-circle"></i>
@@ -22,7 +39,9 @@ export default function ContentTimeline() {
               <li className="step">
                 <span className="head">Application Deadline</span>
                 <br />
-                <span className="sub-head">15th Jan, 2021</span>
+                <span className="sub-head">{`${d.getDate()}th ${
+                  monthNames[d.getMonth()]
+                }, ${d.getFullYear()}`}</span>
                 <br />
                 <div className="progress-box">
                   <i className="fas fa-circle"></i>
@@ -32,7 +51,9 @@ export default function ContentTimeline() {
               <li className="step">
                 <span className="head">Project Submission Deadline</span>
                 <br />
-                <span className="sub-head">15th Feb, 2021</span>
+                <span className="sub-head">{`${d.getDate() + 7}th ${
+                  monthNames[d.getMonth()]
+                }, ${d.getFullYear()}`}</span>
                 <br />
                 <div className="progress-box">
                   <i className="fas fa-circle"></i>
@@ -42,7 +63,9 @@ export default function ContentTimeline() {
               <li className="step non-active">
                 <span className="head">Results</span>
                 <br />
-                <span className="sub-head">15th March, 2021</span>
+                <span className="sub-head">{`${d.getDate() + 7}th ${
+                  monthNames[d.getMonth() + 1]
+                }, ${d.getFullYear()}`}</span>
                 <br />
                 <div className="progress-box">
                   <i className="fas fa-circle"></i>

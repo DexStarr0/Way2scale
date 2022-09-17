@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import Card from "./Card";
+import newsData from "./news.json";
 
 // <motion.div
 //   className="box container-fluid bg-warning "
@@ -33,7 +34,7 @@ export default function Explore() {
     getNews();
   }, []);
 
-  const [news, setNews] = useState(null);
+  const [news, setNews] = useState(newsData);
 
   const getNews = async () => {
     const url =

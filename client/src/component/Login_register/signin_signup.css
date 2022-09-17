@@ -81,7 +81,7 @@ form.sign-in-form {
   background: #e6e6e6;
 
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
@@ -106,7 +106,7 @@ textarea {
   line-height: 1rem;
 
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.8rem;
   overflow: scroll;
   color: #333;
@@ -177,7 +177,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 49px;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
@@ -190,7 +190,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background: #57b846;
 
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
   line-height: 1.5;
   color: #fff;
@@ -293,7 +293,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .panel h3 {
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   font-size: 1.5rem;
 }
@@ -309,7 +309,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border: 2px solid #fff;
   width: 130px;
   height: 41px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.8rem;
 }
 

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +9,7 @@ body {
   position: relative;
   margin-top: var(--nav_h);
 
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Lato", sans-serif;
 }
 /* to make logo resized in navbar  */
 .navbar-brand {

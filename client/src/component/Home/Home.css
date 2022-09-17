@@ -80,7 +80,7 @@
 }
 .formate-1 .global-canvas .top-1 span {
   letter-spacing: 0.3px;
-  font-weight: 200;
+  font-weight: 300;
 }
 .formate-1 .global-canvas h2 {
   font-size: 1.6rem;
@@ -96,7 +96,7 @@
 .formate-1 .global-canvas #date-1 {
   font-size: 0.85rem;
   line-height: 45px;
-  font-weight: 500;
+  font-weight: 400;
 }
 .formate-1 .global-canvas button {
   letter-spacing: 1px;
@@ -362,7 +362,7 @@
 }
 .formate-7 .get-inspired .sub-cont-2 .conBox h3 {
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 0.8;
 }
 .formate-7 .get-inspired .sub-cont-2 .conBox h3 span {

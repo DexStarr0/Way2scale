@@ -2,7 +2,7 @@
   --avtar_dia: 45px;
   --nav_h: 60px;
   --con_max_width: 1150px;
-  --nav-link-weight: 500;
+  --nav-link-weight: 700;
   --nav-link-size: 0.9rem;
   --nav-link-icon: 1rem;
   --color-dark: #3c4852;
@@ -18,6 +18,7 @@ body {
   z-index: 1000;
   top: 0;
   height: var(--nav_h);
+  border-bottom: solid var(--color-light) 0.1rem;
 }
 .sub-nav {
   max-width: var(--con_max_width);

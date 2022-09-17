@@ -30,10 +30,6 @@ import newsData from "./news.json";
 // </motion.div>;
 
 export default function Explore() {
-  useEffect(() => {
-    getNews();
-  }, []);
-
   const [news, setNews] = useState(newsData);
 
   const getNews = async () => {

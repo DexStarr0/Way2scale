@@ -104,13 +104,14 @@ export default function SearchJob() {
             <div className="reward-detail">
               {/* col-1 */}
 
-              {jobs.map((jobinfo) => {
-                return (
-                  <>
-                    <Jobbox jobinfo={jobinfo} />
-                  </>
-                );
-              })}
+              {jobs &&
+                jobs.map((jobinfo) => {
+                  return (
+                    <>
+                      <Jobbox jobinfo={jobinfo} />
+                    </>
+                  );
+                })}
             </div>
           </div>
         </section>

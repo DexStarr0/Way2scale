@@ -30,12 +30,17 @@ import newsData from "./news.json";
 // </motion.div>;
 
 export default function Explore() {
+  useEffect(() => {
+    getNews();
+  }, []);
+
   const [news, setNews] = useState(newsData);
 
   const getNews = async () => {
+    const option = { method: "GET" };
     const url =
       "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=224ccd1061784b2f9d893a447f4aab27";
-    const response = await fetch(url);
+    const response = await fetch(url, option);
     const newsData = await response.json();
 
     setNews(newsData.articles);

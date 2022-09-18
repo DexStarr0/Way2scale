@@ -11,6 +11,7 @@ import SigninSignup from "./component/Login_register/Signin_singup";
 import Navbar from "./component/Navbar";
 import SearchJob from "./component/SearchJob";
 import Alert from "./component/Alert/Alert";
+import ScrollToTop from "./component/ScrollToTop";
 
 export const UserContext = createContext();
 
@@ -52,9 +53,10 @@ function App() {
     <>
       <UserContext.Provider value={{ userData, fetchdata, showAlert }}>
         <Navbar />
+        <ScrollToTop />
         <Alert alert={alert} />
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="profile" element={<Profile />} />
 
           <Route path="contact" element={<Contact />} />

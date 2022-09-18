@@ -34,18 +34,17 @@ export default function Explore() {
     getNews();
   }, []);
 
-  const [news, setNews] = useState(newsData);
+  const [news, setNews] = useState(null);
 
   const getNews = async () => {
-    const option = { method: "GET" };
     const url =
-      "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=224ccd1061784b2f9d893a447f4aab27";
-    const response = await fetch(url, option);
+      "https://gnews.io/api/v4/search?q=example&country=in&token=84cd8ccdbb13e21d2a4e69a7ee168e0e";
+    const response = await fetch(url);
     const newsData = await response.json();
 
     setNews(newsData.articles);
   };
-
+  console.log(news);
   return (
     <>
       <motion.div
@@ -61,7 +60,7 @@ export default function Explore() {
         {news &&
           news.map((newsInfo) => {
             return (
-              newsInfo.urlToImage && (
+              newsInfo.image && (
                 <div key={newsInfo.url} className="position-relative">
                   <span
                     className="badge badge-pill badge-danger bg-danger position-absolute "

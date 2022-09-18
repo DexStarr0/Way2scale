@@ -6,7 +6,7 @@ export default function Card(props) {
   return (
     <div className="card m-2" style={{ width: "18rem" }}>
       <img
-        src={newsInfo.urlToImage}
+        src={newsInfo.image}
         alt="News Thumbnail"
         className="img-responsive"
         style={{ height: "100%", width: "100%" }}

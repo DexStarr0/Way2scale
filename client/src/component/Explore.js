@@ -34,7 +34,7 @@ export default function Explore() {
     getNews();
   }, []);
 
-  const [news, setNews] = useState(null);
+  const [news, setNews] = useState(newsData);
 
   const getNews = async () => {
     const url =
@@ -44,7 +44,7 @@ export default function Explore() {
 
     setNews(newsData.articles);
   };
-  console.log(news);
+
   return (
     <>
       <motion.div

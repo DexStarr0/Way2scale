@@ -2,16 +2,18 @@ import React, { createContext, useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Home from "./component/Home/Home";
-import Explore from "./component/Explore";
+import News from "./component/News/News";
 import Profile from "./component/Profile/Profile";
 import Contact from "./component/Contact";
 import ErrorPage from "./component/ErrorPage";
 import Footer from "./component/Footer";
-import SigninSignup from "./component/Login_register/Signin_singup";
-import Navbar from "./component/Navbar";
-import SearchJob from "./component/SearchJob";
+import SigninSignup from "./component/Sign_In-Out/Signin_singup";
+import Navbar from "./component/Navbar/Navbar";
+import SearchJob from "./component/SearchJob/SearchJob";
 import Alert from "./component/Alert/Alert";
 import ScrollToTop from "./component/ScrollToTop";
+import Explore from "./component/Explore/Explore";
+import BlogPost from "./component/Explore/BlogPost";
 
 export const UserContext = createContext();
 
@@ -61,6 +63,8 @@ function App() {
 
           <Route path="contact" element={<Contact />} />
           <Route path="explore" element={<Explore />} />
+          <Route path="blog_post" element={<BlogPost />} />
+          <Route path="news" element={<News />} />
           <Route path="search-job" element={<SearchJob />} />
 
           <Route path="signin" element={<SigninSignup />} />

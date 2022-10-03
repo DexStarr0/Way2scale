@@ -25,7 +25,7 @@ export default function ContentTimeline() {
           <div id="progress">
             <ul id="progress-num">
               <li className="step active">
-                <span className="head">Launch</span>
+                <span className="head">Launch Date</span>
                 <br />
                 <span className="sub-head">{`${d.getDate() - 7}th ${
                   monthNames[d.getMonth()]
@@ -49,7 +49,7 @@ export default function ContentTimeline() {
                 </div>
               </li>
               <li className="step">
-                <span className="head">Project Submission Deadline</span>
+                <span className="head">Project Submission </span>
                 <br />
                 <span className="sub-head">{`${d.getDate() + 7}th ${
                   monthNames[d.getMonth()]
@@ -61,7 +61,7 @@ export default function ContentTimeline() {
                 </div>
               </li>
               <li className="step non-active">
-                <span className="head">Results</span>
+                <span className="head">Contest Results</span>
                 <br />
                 <span className="sub-head">{`${d.getDate() + 7}th ${
                   monthNames[d.getMonth() + 1]

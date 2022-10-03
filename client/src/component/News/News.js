@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import Card from "./Card";
-import newsData from "./news.json";
+import newsData from "../news.json";
 
 // <motion.div
 //   className="box container-fluid bg-warning "
@@ -29,7 +29,7 @@ import newsData from "./news.json";
 //   />
 // </motion.div>;
 
-export default function Explore() {
+export default function News() {
   useEffect(() => {
     getNews();
   }, []);

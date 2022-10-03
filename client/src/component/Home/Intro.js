@@ -22,7 +22,7 @@ export default function Intro() {
                 <h1 className="display-5 fw-bolder text-capitalize text-white mb-2b title">
                   Welcome {user.name} To Our World
                 </h1>
-                <p className="lead text-white-50 mb-2 ">
+                <p className=" mb-2 subContent">
                   {user.active
                     ? `How are you? It really is great to see you. I’ve missed your presence around here. Yay!`
                     : `“In order to write about life first you must live it.” – Ernest Hemingway`}

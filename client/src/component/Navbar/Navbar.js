@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../style/navbar.css";
-import Logo from "../img/logo.png";
+import "./navbar.css";
+import Logo from "../../img/logo.png";
 import { Link, useLocation } from "react-router-dom";
 
 import {
@@ -50,7 +50,13 @@ export default function Navbar() {
               </span>
               <span className="nav_title">Explore</span>
             </Link>
-            <Link className="nav_link m-md-2 " to="search-job">
+            <Link className="nav_link m-md-2 " to="/news">
+              <span className="nav_title_icon">
+                {path === "/news" ? <IoNewspaper /> : <IoNewspaperOutline />}
+              </span>
+              <span className="nav_title">update</span>
+            </Link>
+            <Link className="nav_link m-md-2 " to="/search-job">
               <span className="nav_title_icon">
                 {path === "/search-job" ? (
                   <HiBriefcase />

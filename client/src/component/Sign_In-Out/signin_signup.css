@@ -81,7 +81,7 @@ form.sign-in-form {
   background: #e6e6e6;
 
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
@@ -106,7 +106,7 @@ textarea {
   line-height: 1rem;
 
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.8rem;
   overflow: scroll;
   color: #333;
@@ -301,6 +301,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .panel p {
   font-size: 0.95rem;
   padding: 0.7rem 0;
+  font-weight: var(--sutitle-weight);
+
+  letter-spacing: var(--sutitle-letSpace);
 }
 
 .btn.transparent {

@@ -1,15 +1,52 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1rem;
 }
+:root {
+  --avtar_dia: 45px;
+  --nav_h: 55px;
+  --m_nav_h: 55px;
+  --logoSize: 35px;
+  --con_max_width: 1150px;
+  --nav-link-weight: 500;
+  --nav-link-size: 0.9rem;
+  --nav-link-icon: 1rem;
+  --color-dark: #3c4852;
+  --color-light: #627984;
+  --text-light: #747373;
+  --text-dark: #212529;
+  --text-white: #ffffff;
+  --subtag-text-light: #a5aec0;
+  --bodyBg: #fff;
+  /* --bodyBg: #e0e5ec; */
+  --sutitle-weight: 400;
+  --sutitle-letSpace: 0.5px;
+}
+
 body {
   position: relative;
   margin-top: var(--nav_h);
+  min-height: 100vh;
+  /* background-color: var(--bodyBg); */
 
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+/* //class presets */
+.subContent {
+  font-size: 0.9rem;
+  font-weight: var(--sutitle-weight);
+  font-weight: var(--sutitle-weight);
+  color: var(--text-light);
+  letter-spacing: var(--sutitle-letSpace);
+}
+.subTag {
+  color: var(--subtag-text-light);
+}
+.textDark {
+  color: var(--color-dark);
 }
 /* to make logo resized in navbar  */
 .navbar-brand {
@@ -17,7 +54,7 @@ body {
 }
 .navbar-brand > img {
   height: 100%;
-  max-height: 50px;
+  max-height: var(--logoSize);
   width: auto;
 }
 /* //footer */

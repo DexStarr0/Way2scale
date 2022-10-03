@@ -1,10 +1,14 @@
+:root {
+  --profile-bg: #e6dace;
+  --profile-boxBg: #f4ece6;
+}
 .profile_container {
   min-height: 100vh;
   /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to left, white 65%, #e6dace 35%);
+  background: linear-gradient(to left, white 65%, var(--profile-bg) 35%);
 }
 .sub_container {
   max-width: 700px;
@@ -15,7 +19,7 @@
 }
 
 .pro_detail {
-  background-color: #f4ece6;
+  background-color: var(--profile-boxBg);
   height: 450px;
 }
 .avtar img {
@@ -72,7 +76,7 @@
   .profile_container {
     min-height: 100vh;
 
-    background: linear-gradient(to top, #e6dace 70%, white 30%);
+    background: linear-gradient(to top, var(--profile-bg) 70%, white 30%);
   }
   .avtar img {
     height: 150px;

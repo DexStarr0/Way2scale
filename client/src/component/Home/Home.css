@@ -89,9 +89,12 @@
 }
 .formate-1 .global-canvas p {
   font-size: 1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: var(--sutitle-letSpace);
   /* line-height: 1rem; */
   font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: var(--sutitle-weight);
+  /* color: var(--text-light); */
 }
 .formate-1 .global-canvas #date-1 {
   font-size: 0.85rem;
@@ -203,7 +206,9 @@
 /* formate-3 */
 .formate-3 .contest-overview p {
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: var(--sutitle-weight);
+  color: var(--text-light);
+  letter-spacing: var(--sutitle-letSpace);
 }
 /* end-3 */
 /* formate-4 */

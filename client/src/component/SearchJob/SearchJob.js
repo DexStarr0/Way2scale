@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import Jobbox from "./Jobbox";
+
 import { motion } from "framer-motion";
-import { UserContext } from "../App";
-// import jobdata from "./jobsdata.json";
+import { UserContext } from "../../App";
+import Jobbox from "./JobBox";
 
 export default function SearchJob() {
   const { showAlert } = useContext(UserContext);
@@ -94,29 +94,15 @@ export default function SearchJob() {
             </form>
           </div>
         </section>
-      </motion.section>
-
-      {/* start-6 */}
-      {jobs && (
-        <section className="formate-6">
-          <div className="rewards wi-1">
-            <h3 className="subheading">Jobs that Matches Your Search</h3>
-            <div className="reward-detail">
-              {/* col-1 */}
-
-              {jobs &&
-                jobs.map((jobinfo) => {
-                  return (
-                    <>
-                      <Jobbox jobinfo={jobinfo} />
-                    </>
-                  );
-                })}
-            </div>
+        {
+          <div className="mt-5 mb-3 d-flex justify-content-center flex-wrap flex-row">
+            {jobs &&
+              jobs.map((jobinfo) => {
+                return <Jobbox jobinfo={jobinfo} key={jobinfo.job_id} />;
+              })}
           </div>
-        </section>
-      )}
-      {/* end-6 */}
+        }
+      </motion.section>
     </>
   );
 }

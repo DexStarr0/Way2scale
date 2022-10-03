@@ -65,7 +65,7 @@ export default function Footer() {
 
             <div className="copyright">
               <p className="mb-0">
-                <small>&copy; AYUSH. All Rights Reserved.</small>
+                <small>&copy; Way2scale. All Rights Reserved.</small>
               </p>
             </div>
           </div>

@@ -6,8 +6,10 @@ export default function SkillsScanner() {
       {/* start-5 */}
       <section className="formate-5">
         <div className="sus wi-1">
-          <h3 className="subheading">Skills Under Scanner</h3>
-          <p>The following skills will be evaluated for this contest</p>
+          <h3 className="subheading ">Skills Under Scanner</h3>
+          <p className="subContent">
+            The following skills will be evaluated for this contest
+          </p>
           <div>
             <span>Automation</span>
             <span>Creativity</span>

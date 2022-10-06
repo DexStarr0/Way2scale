@@ -56,7 +56,7 @@ export default function SignInOut() {
                 </span>
                 <span className="nav_title">profile</span>
               </Link>
-              <Link className="nav_link" to="/support">
+              <Link className="nav_link" to="/contact">
                 <span className="nav_title_icon">
                   <MdOutlineHelp />
                 </span>

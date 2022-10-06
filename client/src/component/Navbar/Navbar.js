@@ -37,13 +37,13 @@ export default function Navbar() {
 
               <span className="nav_title">Home</span>
             </Link>
-            <Link className="nav_link m-md-2 " to="/contact">
+            {/*<Link className="nav_link m-md-2 " to="/contact">
               <span className="nav_title_icon">
                 {path === "/contact" ? <RiMailSendFill /> : <RiMailSendLine />}
               </span>
 
               <span className="nav_title">contact</span>
-            </Link>
+  </Link>*/}
             <Link className="nav_link m-md-2 " to="/explore">
               <span className="nav_title_icon">
                 {path === "/explore" ? <IoNewspaper /> : <IoNewspaperOutline />}

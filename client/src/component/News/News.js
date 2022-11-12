@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import Card from "./Card";
 import newsData from "../news.json";
+import { UserContext } from "../../App";
 
 // <motion.div
 //   className="box container-fluid bg-warning "
@@ -35,13 +36,14 @@ export default function News() {
   }, []);
 
   const [news, setNews] = useState(newsData);
-
+  const { setLoader } = useContext(UserContext);
   const getNews = async () => {
+    setLoader(true);
     const url =
       "https://gnews.io/api/v4/search?q=example&country=in&token=84cd8ccdbb13e21d2a4e69a7ee168e0e";
     const response = await fetch(url);
     const newsData = await response.json();
-
+    setLoader(false);
     setNews(newsData.articles);
   };
 

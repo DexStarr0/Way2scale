@@ -14,6 +14,7 @@ import Alert from "./component/Alert/Alert";
 import ScrollToTop from "./component/ScrollToTop";
 import Explore from "./component/Explore/Explore";
 import BlogPost from "./component/Explore/BlogPost";
+import Lodder from "./component/Loader/Loader";
 
 export const UserContext = createContext();
 
@@ -22,6 +23,7 @@ export const UserContext = createContext();
 function App() {
   const location = useLocation();
   const [userData, setuserData] = useState({ active: false });
+  const [showLoader, setLoader] = useState(false);
   const [alert, setAlert] = useState(null);
   useEffect(() => {
     fetchdata();
@@ -54,8 +56,11 @@ function App() {
   };
   return (
     <>
-      <UserContext.Provider value={{ userData, fetchdata, showAlert }}>
+      <UserContext.Provider
+        value={{ userData, fetchdata, showAlert, setLoader }}
+      >
         <Navbar />
+        <Lodder pop={showLoader} />
         <ScrollToTop />
         <Alert alert={alert} />
         <Routes location={location} key={location.pathname}>

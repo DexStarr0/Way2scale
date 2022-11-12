@@ -5,7 +5,7 @@ import { UserContext } from "../../App";
 import Jobbox from "./JobBox";
 
 export default function SearchJob() {
-  const { showAlert } = useContext(UserContext);
+  const { showAlert, setLoader } = useContext(UserContext);
   const [jobs, setjobs] = useState(null);
   const [searchkey, setsearchkey] = useState({
     job_type: "",
@@ -33,12 +33,15 @@ export default function SearchJob() {
         showAlert("warning", "Please fill the form properly ");
         return;
       }
+      setLoader(true);
       const response = await fetch("/findjobs", options);
       const data = await response.json();
       setjobs(data);
+      setLoader(false);
       // console.log(data);
     } catch (error) {
       console.log(error);
+      setLoader(false);
     }
   };
 

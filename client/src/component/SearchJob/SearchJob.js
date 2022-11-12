@@ -7,7 +7,10 @@ import Jobbox from "./JobBox";
 export default function SearchJob() {
   const { showAlert } = useContext(UserContext);
   const [jobs, setjobs] = useState(null);
-  const [searchkey, setsearchkey] = useState({ job_type: "", location: "" });
+  const [searchkey, setsearchkey] = useState({
+    job_type: "",
+    location: "",
+  });
   const handleInput = (e) => {
     let value = e.target.value;
     let name = e.target.name;
@@ -19,7 +22,7 @@ export default function SearchJob() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       job_type: searchkey.job_type,
-      location: searchkey.job_type,
+      location: searchkey.location,
     }),
   };
 
@@ -33,7 +36,7 @@ export default function SearchJob() {
       const response = await fetch("/findjobs", options);
       const data = await response.json();
       setjobs(data);
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.log(error);
     }

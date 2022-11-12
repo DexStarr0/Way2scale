@@ -109,6 +109,23 @@ router.post("/contact", authenticate, async (req, res) => {
 router.get("/getdata", authenticate, async (req, res) => {
   res.json(req.rootUser);
 });
+// updateinfo method - post
+router.post("/profile", authenticate, async (req, res) => {
+  const { phone, address, city, country, postalCode, aboutMe } = req.body;
+  try {
+    const data = User.updateOne(
+      {
+        _id: req.userId,
+      },
+      {
+        name: "pass",
+      }
+    );
+    req.json({ message: "all good" });
+  } catch (error) {
+    console.log(error);
+  }
+});
 //post fetdata
 router.post("/fetdata", authenticate, async (req, res) => {
   // res.status(200).json(req.rootUser);

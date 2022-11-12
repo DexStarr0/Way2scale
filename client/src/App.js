@@ -25,15 +25,16 @@ function App() {
   const [alert, setAlert] = useState(null);
   useEffect(() => {
     fetchdata();
-  }, []);
+  }, [location]);
   const fetchdata = async () => {
+    const option = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
     try {
-      const response = await fetch("/fetdata", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch("/fetdata", option);
 
       const data = await response.json();
 

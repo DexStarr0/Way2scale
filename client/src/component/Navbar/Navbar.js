@@ -8,8 +8,11 @@ import {
   RiHomeSmile2Line,
   RiMailSendFill,
   RiMailSendLine,
+  RiLightbulbFlashFill,
+  RiLightbulbFlashLine,
 } from "react-icons/ri";
 import { HiOutlineBriefcase, HiBriefcase } from "react-icons/hi";
+import { FcIdea, FcNoIdea } from "react-icons/fc";
 import { IoNewspaperOutline, IoNewspaper } from "react-icons/io5";
 
 import SignInOut from "./SignInOut";
@@ -44,15 +47,24 @@ export default function Navbar() {
 
               <span className="nav_title">contact</span>
   </Link>*/}
-            <Link className="nav_link m-md-2 " to="/explore">
+            {/* <Link className="nav_link m-md-2 " to="/explore">
               <span className="nav_title_icon">
-                {path === "/explore" ? <IoNewspaper /> : <IoNewspaperOutline />}
+                {path === "/explore" ? (
+                  <RiLightbulbFlashFill />
+                ) : (
+                  <RiLightbulbFlashLine />
+                )}
               </span>
               <span className="nav_title">Explore</span>
-            </Link>
+            </Link> */}
             <Link className="nav_link m-md-2 " to="/news">
               <span className="nav_title_icon">
-                {path === "/news" ? <IoNewspaper /> : <IoNewspaperOutline />}
+                {/* {path === "/news" ? <IoNewspaper /> : <IoNewspaperOutline />} */}
+                {path === "/news" ? (
+                  <RiLightbulbFlashFill />
+                ) : (
+                  <RiLightbulbFlashLine />
+                )}
               </span>
               <span className="nav_title">update</span>
             </Link>

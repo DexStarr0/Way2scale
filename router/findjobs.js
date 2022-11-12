@@ -22,7 +22,7 @@ router.post("/findjobs", async (req, res) => {
     // res.send(data["jobs_results"]);
     const params = {
       engine: "google_jobs",
-      start: -1,
+      // start: -1,
       q: `${job_type + " " + location}`,
       google_domain: "google.com",
       // location: location,

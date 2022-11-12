@@ -27,6 +27,7 @@ function App() {
   const [alert, setAlert] = useState(null);
   useEffect(() => {
     fetchdata();
+    setLoader(false);
   }, [location]);
   const fetchdata = async () => {
     const option = {

@@ -26,7 +26,7 @@ function App() {
   const [showLoader, setLoader] = useState(false);
   const [alert, setAlert] = useState(null);
   useEffect(() => {
-    setLoader(false);
+    // setLoader(false);
     fetchdata();
   }, [location]);
   const fetchdata = async () => {

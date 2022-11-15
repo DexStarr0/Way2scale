@@ -32,6 +32,7 @@ import { UserContext } from "../../App";
 
 export default function News() {
   useEffect(() => {
+    // setLoader(false);
     getNews();
   }, []);
 
@@ -43,8 +44,8 @@ export default function News() {
       "https://gnews.io/api/v4/search?q=example&country=in&token=84cd8ccdbb13e21d2a4e69a7ee168e0e";
     const response = await fetch(url);
     const newsData = await response.json();
-    setLoader(false);
     setNews(newsData.articles);
+    setLoader(false);
   };
 
   return (

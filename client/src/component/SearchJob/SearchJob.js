@@ -29,7 +29,7 @@ export default function SearchJob() {
   const getjobs = async (e) => {
     e.preventDefault();
     try {
-      if (!searchkey.job_type || !searchkey.job_type) {
+      if (!searchkey.job_type || !searchkey.location) {
         showAlert("warning", "Please fill the form properly ");
         return;
       }

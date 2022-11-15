@@ -5,7 +5,7 @@ import { UserContext } from "../App";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-  const { userData, showAlert } = useContext(UserContext);
+  const { userData, showAlert, setLoader } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,6 +30,7 @@ export default function Contact() {
   //posting user message to server
   const postContactData = async (e) => {
     e.preventDefault();
+    setLoader(true);
     try {
       const response = await fetch("/contact", {
         method: "POST",
@@ -42,7 +43,7 @@ export default function Contact() {
       });
 
       const data = await response.json();
-
+      setLoader(false);
       if (response.status === 401) {
         showAlert("warning", data.error);
         navigate("/signin");

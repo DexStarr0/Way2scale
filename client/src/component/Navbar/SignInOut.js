@@ -9,17 +9,19 @@ export default function SignInOut() {
   const toggler = () => {
     document.querySelector(".profile_dummy_icon").classList.toggle("showOpt");
   };
-  const { userData, fetchdata, showAlert } = useContext(UserContext);
+  const { userData, fetchdata, showAlert, setLoader } = useContext(UserContext);
   const navigate = useNavigate();
 
   const Signout = async () => {
     try {
+      setLoader(true);
       const response = await fetch("/signout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
 
       const data = await response.json();
+      setLoader(false);
       if (response.status !== 200) {
         // alert(data.error);
         showAlert("warning", data.error);

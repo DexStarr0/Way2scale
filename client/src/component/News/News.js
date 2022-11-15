@@ -32,7 +32,6 @@ import { UserContext } from "../../App";
 
 export default function News() {
   useEffect(() => {
-    // setLoader(false);
     getNews();
   }, []);
 

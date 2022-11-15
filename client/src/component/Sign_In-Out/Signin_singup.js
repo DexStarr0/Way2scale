@@ -8,7 +8,7 @@ import { UserContext } from "../../App";
 import { motion } from "framer-motion";
 
 export default function SigninSignup() {
-  const { userData, fetchdata, showAlert } = useContext(UserContext);
+  const { userData, fetchdata, showAlert, setLoader } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function SigninSignup() {
   const postData = async (e) => {
     e.preventDefault();
     const { name, email, phone, password, cpassword } = user;
-
+    setLoader(true);
     const response = await fetch("/register", {
       method: "POST",
       headers: {
@@ -52,7 +52,7 @@ export default function SigninSignup() {
     });
 
     let data = await response.json();
-
+    setLoader(false);
     if (response.status === 422 || !data) {
       // window.alert(data.error);
       showAlert("warning", data.error);
@@ -86,7 +86,7 @@ export default function SigninSignup() {
     try {
       e.preventDefault();
       const { email, password } = loginData;
-
+      setLoader(true);
       const response = await fetch("/signin", {
         method: "POST",
         headers: {
@@ -96,7 +96,7 @@ export default function SigninSignup() {
       });
 
       const data = await response.json();
-
+      setLoader(false);
       if (response.status !== 201 || !data) {
         showAlert("warning", data.error);
         throw new Error(data.error);

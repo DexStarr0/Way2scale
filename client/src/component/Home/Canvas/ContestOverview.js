@@ -8,32 +8,23 @@ export default function ContestOverview() {
         <div className="contest-overview wi-1">
           <h3 className="subheading">Contest Overview</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis, lectus magna fringilla urna,
-            porttitor rhoncus dolor purus non enim praesent elementum facilisis
-            leo, vel fringilla est ullamcorper eget nulla facilisi etiam
-            dignissim diam quis enim lobortis scelerisque fermentum dui faucibus
-            in ornare quam viverra orci sagittis eu volutpat odio facilisis
-            mauris sit amet massa. <br />
-            <br />
-            Vitae tortor condimentum lacinia quis vel eros donec ac odio tempor
-            orci dapibus ultrices in iaculis nunc sed augue lacus, viverra vitae
-            congue eu, consequat ac felis donec et odio pellentesque diam
-            volutpat commodo sed egestas egestas fringilla phasellus faucibus{" "}
             <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis, lectus magna fringilla urna,
-            porttitor rhoncus dolor purus non enim praesent elementum facilisis
-            leo, vel fringilla est ullamcorper eget nulla facilisi etiam
-            dignissim diam quis enim lobortis scelerisque fermentum dui faucibus
-            in ornare quam viverra orci sagittis eu volutpat odio facilisis
-            mauris sit amet massa. <br />
+            • Please be available at least 5 - 10 minutes prior to the
+            commencement of any of the rounds / interview
             <br />
-            Vitae tortor condimentum lacinia quis vel eros donec ac odio tempor
-            orci dapibus ultrices in iaculis nunc sed augue lacus, viverra vitae
-            congue eu, consequat ac felis donec et odio pellentesque diam
-            volutpat commodo sed egestas egestas fringilla phasellus faucibus
+            <br />
+            • Ensure you have a reliable internet connection. It is recommended
+            that you have a backup internet connection like a 4G mobile hotspot
+            in case of any latency / connectivity issues. <br />
+            <br />
+            • Keep all your devices or notifications on “Silent Mode” to avoid
+            hindering your focus
+            <br />
+            <br />
+            • Ensure that you have access to stationary if necessary <br />
+            <br />• If extenuating circumstances prevent you from attending the
+            scheduled Test, notify the Relevel team immediately
           </p>
         </div>
       </section>

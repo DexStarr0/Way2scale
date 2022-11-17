@@ -37,11 +37,12 @@ export default function Contest() {
             <span>For 7-8 olds</span>
           </div>
 
-          <h2>Global Canvas 2019: Habitats of the World</h2>
+          <h2>Full Stack Development Test</h2>
           <p>
-            The challenge is to create an exciting group mini-exhibition/art
-            display <br />
-            interpreting this theme! You can use any materials you want.
+            A case study round that tests your ability to pitch, negotiate, and
+            handle <br />
+            objections while making a sale. Negotiation Pitching Objection
+            Handling.
           </p>
 
           <p id="date-1">{`${d.getDate() - 7}th ${
@@ -50,13 +51,24 @@ export default function Contest() {
             monthNames[d.getMonth() + 1]
           }, ${d.getFullYear()}`}</p>
           <button className=" m-2 py-1 px-2 bg-dark text-white">
-            <span>Enter Now</span>
+            <a
+              className="text-white"
+              href="https://relevel.com/test/full-stack-development"
+              target="blank"
+            >
+              <span>Enter Now</span>
+            </a>
             <i className="fa-solid fa-arrow-right px-1"></i>
           </button>
 
           <button className=" m-2 py-1 px-2">
             <i className="fa-solid fa-download px-1"></i>
-            <span>Download Guideline</span>
+            <a
+              href="https://relevel.com/test/full-stack-development"
+              target="blank"
+            >
+              <span className="text-black">Download Guideline</span>
+            </a>
           </button>
         </div>
       </section>

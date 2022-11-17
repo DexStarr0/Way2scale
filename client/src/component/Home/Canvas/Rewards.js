@@ -22,7 +22,8 @@ export default function Rewards() {
                 <h3>Grand Prize</h3>
                 <ul>
                   <li>1 Winner</li>
-                  <li>$5000 Cash Prize</li>
+                  <li>iPhone 13 Mini • 128 GBs</li>
+                  <li>Certificates recognised by NSDC</li>
                 </ul>
               </div>
             </div>
@@ -35,9 +36,8 @@ export default function Rewards() {
                 <h3>First Runner Up</h3>
                 <ul>
                   <li>2 Winners</li>
-                  <li>Trip to Australia</li>
-                  <li>$2000 Cash Prize</li>
-                  <li>Trip to Australia</li>
+                  <li>iPhone 13 Mini • 128 GBs</li>
+                  <li>Certificates recognised by NSDC</li>
                 </ul>
               </div>
             </div>
@@ -49,9 +49,9 @@ export default function Rewards() {
               <div className="sub-cont">
                 <h3>Second Runner Up</h3>
                 <ul>
-                  <li>5 Winners</li>
-                  <li>$1000 Cash Prize</li>
-                  <li>Certificate</li>
+                  <li>Top 50 Winners</li>
+                  <li>Relevel Goodie Box</li>
+                  <li>Certificates recognised by NSDC</li>
                 </ul>
               </div>
             </div>
@@ -63,8 +63,9 @@ export default function Rewards() {
               <div className="sub-cont">
                 <h3>Special Category Prize</h3>
                 <ul>
-                  <li>10 Winner</li>
-                  <li>$500 Cash Prize</li>
+                  <li>Top 100 Winner</li>
+                  <li>Relevel Goodie Box</li>
+                  <li>Certificates recognised by NSDC</li>
                 </ul>
               </div>
             </div>

@@ -11,11 +11,11 @@ export default function SkillsScanner() {
             The following skills will be evaluated for this contest
           </p>
           <div>
-            <span>Automation</span>
-            <span>Creativity</span>
-            <span>Time Management</span>
-            <span>Subject Expertise</span>
-            <span>Teamwork</span>
+            <span>Programming Fundamentals</span>
+            <span>Data Structures and Algorithms</span>
+            <span>HTML and CSS </span>
+            <span>React.js</span>
+            <span>Node.js or Java</span>
           </div>
         </div>
       </section>

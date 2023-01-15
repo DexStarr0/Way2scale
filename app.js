@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 //dotenv node module
 dotenv.config({ path: "./config.env" });
 const PORT = process.env.PORT || 5000;

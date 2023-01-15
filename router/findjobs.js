@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const fetch = require("node-fetch");
 const SerpApi = require("google-search-results-nodejs");
-const search = new SerpApi.GoogleSearch(
-  "8c48e01ee0ee42fbf32b46336221c1f897d13390d72cf3f2f994428133c09310"
-);
+const serpapiKey = process.env.SERPAPI_KEY;
+
+const search = new SerpApi.GoogleSearch(serpapiKey);
 //post search_job
 router.post("/findjobs", async (req, res) => {
   try {
